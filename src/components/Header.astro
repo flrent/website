@@ -1,18 +1,23 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
+import BaseHead from './BaseHead.astro';
+import BlogPost from '../layouts/BlogPost.astro';
 ---
 
 <header>
-	<h1 class="text-5xl text-center">
+	<h1 class="text-6xl text-left font-bold">
 		{SITE_TITLE}
 	</h1>
+	<p class="my-10">I am a Staff Software Engineer, living in San Francisco, California with my wife and our daughter.</p>
+	<p>I am currently working at Flickr as a tech lead, primarily on front-end and data engineering initiatives focused on revenue generation and monetization through subscriptions and advertising.</p>
+	<p class="my-10">I was born and raised in Bordeaux, France, and have had the opportunity to work for startups in Montreal, QC, Vancouver, BC, and Lausanne, Switzerland before joining Yahoo and finally settling in the United States.</p>
+	<p class="my-10">Apart from my work, I am passionate about music, photography, movies, cycling and traveling.</p>
 	<nav>
-		<HeaderLink href="/" class="text-xl">Home</HeaderLink>
-		<HeaderLink href="/blog" class="text-xl">Blog</HeaderLink>
-		<HeaderLink href="/about" class="text-xl">About me</HeaderLink>
-		<HeaderLink href="https://twitter.com/flrent" target="_blank" class="text-xl">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/flrent" target="_blank" class="text-xl">GitHub</HeaderLink>
+		<HeaderLink href="/" class="text-l text-gray-300 uppercase">About</HeaderLink><span class="text-gray-300">&#x2022</span>
+		<HeaderLink href="https://twitter.com/flrent" target="_blank" class="text-l text-gray-300 uppercase group">Twitter <span class="hidden group-hover:inline text-xs">&#8599;</span></HeaderLink><span class="text-gray-300">&#x2022</span>
+		<HeaderLink href="https://github.com/flrent" target="_blank" class="text-l text-gray-300 uppercase group">GitHub <span class="hidden group-hover:inline text-xs">&#8599;</span></HeaderLink><span class="text-gray-300">&#x2022</span>
+		<HeaderLink href="https://www.linkedin.com/in/florentlamoureux" target="_blank" class="text-l text-gray-300 uppercase group">LinkedIn <span class="hidden group-hover:inline text-xs">&#8599;</span></HeaderLink>
 	</nav>
 </header>
 <style>
@@ -21,5 +26,6 @@ import { SITE_TITLE } from '../consts';
 	}
 	h1 {
 		margin: 0.5em 0;
+		color: #e45b00;
 	}
 </style>
