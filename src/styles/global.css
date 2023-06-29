@@ -72,3 +72,9 @@ blockquote {
 	margin: 0px;
 	font-style: italic;
 }
+
+::selection {
+	background: #e45b00;
+	color: white;
+	/* Safari */
+}

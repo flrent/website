@@ -1,0 +1,25 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+import BaseHead from './BaseHead.astro';
+import BlogPost from '../layouts/BlogPost.astro';
+---
+
+<header>
+	<h1 class="text-xl text-left font-bold">
+		<a href="/">&#8592; {SITE_TITLE}</a>
+	</h1>
+	<p class="">Staff Software Engineer</p>
+</header>
+<style>
+	header {
+		margin: 0em 0 2em;
+	}
+	h1 {
+		margin: 0.5em 0;
+		color: #e45b00;
+	}
+	.flickr-link {
+		color: #0063dc;
+	}
+</style>
