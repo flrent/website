@@ -54,5 +54,14 @@ const posts = (await getCollection('blog')).sort(
 			<div class="md:w-4/6 p-4 text-center flex-grow">
 			</div>
 		  </div>
+	<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVVH6DSYJ0"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-CVVH6DSYJ0');
+		</script>
 	</body>
 </html>
