@@ -1,9 +1,11 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import PhotosSummary from '../components/PhotosSummary.astro';
 import RecentPosts from '../components/RecentPosts.astro';
+import ContactMe from '../components/ContactMe.astro';
 ---
 
 <!DOCTYPE html>
@@ -11,19 +13,19 @@ import RecentPosts from '../components/RecentPosts.astro';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="flex flex-col content-center flex-wrap max-w-7xl m-auto">
+	<body class="flex flex-col content-center flex-wrap max-w-7xl m-auto w-full">
 		<div class="max-w-lg">
 			<Header />
 			<hr style="border-style: solid; border-top-width: 1px;">
 			<PhotosSummary />
-
 		</div>
 		<div class="flex md:flex-row flex-wrap w-full max-w-7xl flex-grow">
 			<div class="md:w-2/6 p-4 text-left"></div>
-			<div class="md:w-4/6 p-4 text-center flex-grow">
-			</div>
-		  </div>
-		  <RecentPosts />
+			<div class="md:w-4/6 p-4 text-center flex-grow"></div>
+		</div>
+		<RecentPosts />
+		<ContactMe />
+		<Footer />
 	<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVVH6DSYJ0"></script>
 		<script is:inline>
