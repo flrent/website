@@ -2,8 +2,8 @@
 const today = new Date();
 ---
 
-<footer class="my-10 text-gray-300">
-	&copy; {today.getFullYear()} Florent Lamoureux. Last updated July 2023. <a href="https://astro.build/" target="_new" class="text-gray-300">Built with AstroJS</a>.
+<footer class="my-10 text-gray-300 dark:text-slate-600">
+	&copy; {today.getFullYear()} Florent Lamoureux. Last updated July 2023. <a href="https://astro.build/" target="_new" class="text-gray-300 dark:text-slate-600">Built with AstroJS</a>.
 </footer>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVVH6DSYJ0"></script>
@@ -14,6 +14,25 @@ const today = new Date();
 
   gtag('config', 'G-CVVH6DSYJ0');
 </script>
+
+<script is:inline>
+	const theme = (() => {
+		if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+		return localStorage.getItem("theme");
+		}
+		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+			return "dark";
+		}
+		return "light";
+	})();
+
+	if (theme === "light") {
+		document.documentElement.classList.remove("dark");
+	} else {
+		document.documentElement.classList.add("dark");
+	}
+	window.localStorage.setItem("theme", theme);
+	</script>
 <style>
 	footer {
 		padding: 25px;
