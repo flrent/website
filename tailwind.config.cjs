@@ -6,7 +6,10 @@ module.exports = {
 	darkMode: "class",
 	theme: {
 		extend: {
-		  screens: { 'sm': { 'max': '640px' } },
+			fontFamily: {
+				notoserif: ['"NotoSerif"', 'serif'],
+			},
+			screens: { 'sm': { 'max': '640px' } },
 		},
-	  },
+	},
 }

@@ -3,13 +3,7 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
- @font-face {
-	font-family: 'NotoSerif';
-	src: url('/fonts/NotoSerif-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-  }
+
  body {
 	font-family: 'NotoSerif', serif;
 	margin: auto;

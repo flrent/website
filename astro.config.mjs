@@ -8,5 +8,9 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://florentlamoureux.fr',
-  integrations: [mdx(), sitemap(), tailwind(), react()]
+  integrations: [mdx(), sitemap(), tailwind({
+    config: {
+      applyBaseStyles: false,
+    },
+  }), react()]
 });
