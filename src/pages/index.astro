@@ -17,7 +17,9 @@ import '../styles/main.css';
 	<body class="flex flex-col content-center flex-wrap max-w-7xl m-auto w-full dark:bg-slate-800">
 		<div class="max-w-full">
 			<Header />
-			<PhotosSummary />
+			<div class="homepage-photo-summary">
+				<PhotosSummary />
+			</div>
 		</div>
 		<RecentPosts />
 		<ContactMe />
@@ -33,3 +35,9 @@ import '../styles/main.css';
 		</script>
 	</body>
 </html>
+
+<style>
+.homepage-photo-summary {
+	animation: fadeIn 1s ease-in both;
+}
+</style>

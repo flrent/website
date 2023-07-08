@@ -25,7 +25,7 @@ import '../styles/main.css';
 	<body class="flex flex-col content-center flex-wrap max-w-3xl m-auto dark:bg-slate-800">
 		<main class="w-full max-w-3xl flex-grow">
 			<ThinHeader />
-			<h1 class="text-6xl text-center my-10">Photography</h1>
+			<h1 class="text-6xl text-center my-10 sm:text-5xl">Photography</h1>
 			<p class="dark:text-slate-200">I primarily shoot with the following cameras:</p>
 			<p class="italic ml-5 dark:text-slate-400">iPhone 12 Pro (always with me)</p>
 			<p class="italic ml-5 dark:text-slate-400">Sony α7II (mirrorless)</p>
@@ -36,3 +36,9 @@ import '../styles/main.css';
 		<Footer />
 	</body>
 </html>
+
+<style>
+	h1 {
+		animation: fadeIn .3s ease-in both;
+	}
+</style>
