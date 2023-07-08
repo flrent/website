@@ -7,9 +7,6 @@ module.exports = {
 	theme: {
 		extend: {
 		  screens: { 'sm': { 'max': '640px' } },
-		  colors: {
-			flxorange: '#e45b00',
-		  },
 		},
 	  },
 }

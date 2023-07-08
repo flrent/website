@@ -1,7 +1,7 @@
 ---
-title: "First post"
-description: "Nothing to see yet"
+title: "Hello world"
+description: "Welcome to my new blog"
 pubDate: "June 29 2023"
 ---
 <br>
-Nothing to see yet.
+Starting a blog again.

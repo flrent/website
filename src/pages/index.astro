@@ -14,14 +14,9 @@ import ContactMe from '../components/ContactMe.astro';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body class="flex flex-col content-center flex-wrap max-w-7xl m-auto w-full dark:bg-slate-800">
-		<div class="max-w-lg">
+		<div class="max-w-full">
 			<Header />
-			<hr style="border-style: solid; border-top-width: 1px;">
 			<PhotosSummary />
-		</div>
-		<div class="flex md:flex-row flex-wrap w-full max-w-7xl flex-grow">
-			<div class="md:w-2/6 p-4 text-left"></div>
-			<div class="md:w-4/6 p-4 text-center flex-grow"></div>
 		</div>
 		<RecentPosts />
 		<ContactMe />
