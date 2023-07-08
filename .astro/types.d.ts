@@ -206,6 +206,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"twitter-threads-chrome-extension.mdx": {
+	id: "twitter-threads-chrome-extension.mdx";
+  slug: "twitter-threads-chrome-extension";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 };
 
 	};
