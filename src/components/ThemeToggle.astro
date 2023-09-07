@@ -14,11 +14,10 @@
 			button.innerText = (theme === "light" ? "🌙" : "🌞");
 		}
 	};
+
+	let theme = localStorage ? localStorage.getItem("theme") : "light";
+	document.querySelector('button')!.innerText = (theme === "light" ? "🌞" : "🌙");
 	document.querySelector('button')?.addEventListener('click', handleClick)
 </script>
 <button>
-	{() => {
-		const theme = localStorage.getItem("theme") || "light";
-		return theme === "light" ? "🌙" : "🌞";
-	}}
 </button>
