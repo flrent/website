@@ -1,0 +1,41 @@
+---
+const today = new Date();
+---
+
+<footer class="my-10 text-gray-300 dark:text-slate-600">
+	<p>&copy; {today.getFullYear()} Florent Lamoureux. Last updated May 2024. <a href="/rss.xml" class="text-s mb-10 dark:text-slate-400">RSS feed</a>. <a href="https://astro.build/" target="_new" class="text-gray-300 dark:text-slate-600">Built with AstroJS</a>.</p>
+</footer>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVVH6DSYJ0"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CVVH6DSYJ0');
+</script>
+
+<script is:inline>
+	const theme = (() => {
+		if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+		return localStorage.getItem("theme");
+		}
+		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+			return "dark";
+		}
+		return "light";
+	})();
+
+	if (theme === "light") {
+		document.documentElement.classList.remove("dark");
+	} else {
+		document.documentElement.classList.add("dark");
+	}
+	window.localStorage.setItem("theme", theme);
+	</script>
+<style>
+	footer {
+		padding: 25px;
+		text-align: center;
+	}
+</style>

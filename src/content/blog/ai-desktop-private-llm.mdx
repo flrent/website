@@ -1,0 +1,42 @@
+---
+title: 'Building a local and offline private desktop AI app using LLMs'
+description: 'Using Electron and self contained Ollama server'
+pubDate: 'May 7 2024'
+---
+<div class="dark:text-slate-300">
+    <p class="mt-4">
+        I've been very interested in building offline and private AI applications.
+    </p>
+    <p class="mt-4">
+         If your computer can handle it, like most Apple laptops with M1 Pro and latest chips do, you can improve a lot of workflows. 
+    </p>
+    <p class="mt-4">
+        Even outside of work, I often need to organize personal files, such as documents, bills, or photos. The only reliable way today to be able to use automated organization tools is to use cloud services. Unfortunately, this means that you have to upload your files to a third-party service, which can be a privacy concern.
+    </p>
+
+    <div class="mt-4">
+    <a target="_new" href="https://github.com/flrent/ai-get-started-desktop-app" class="font-bold py-2 px-4 text-flxorange sm:px-0">
+    ![https://github.com/flrent/ai-get-started-desktop-app](https://raw.githubusercontent.com/flrent/ai-get-started-desktop-app/96554f34637fdd1e9cb2982072496a7c82e61d98/screenshots/screenshot.png)
+    </a>
+    </div>
+    <p class="mt-4">
+        With a local LLM, a desktop app that can be written using Electron, you can have a private and offline AI application that can use an LLM as a agent for a very specific task. For instance, automatically classifying all your photos into categories based on portraits, cities they're taken in, or any other metadata that models like LLava or Moondream can find.
+    </p>
+    <p class="mt-4">
+        You could also have your app connect to Messages.app or Photos Library, read the sqlite database, and build a search, insights features, or any other ideas on top of it leveraging AI.
+    </p>
+    <p class="mt-4">
+        I was very excited when I found out <a target="_new" href="https://www.chatd.ai/">chatd</a> when I realized they bundled not only the client app, but the model and the inference server in a single app. This means you can run the server locally, pick any model that Ollama supports, and have a private and offline AI application. The only downside is that it's only as powerful as your machine, and that it needs to download GBs of models before doing anything.
+    </p>
+    <p class="mt-4">
+        I'm now tinkering with this setup, and will likely experiment building single task-focused AI apps that can run locally. In the meantime, I've created a repo from the original chatd codebase as a blank boilerplate of this setup, with the bare minimum to get started. It contains what you need to interact with a model using Electron's APIs, the bundle logic, and a basic UI.
+    </p>
+    <div class="mt-4 flex justify-center sm:justify-start">
+        <a target="_new" href="https://github.com/flrent/ai-get-started-desktop-app" class="font-bold py-2 px-4 text-flxorange sm:px-0">
+            Check out flrent/ai-get-started-desktop-app on Github
+        </a>
+    </div>
+
+    <p class="mt-4">Enjoy!</p>
+
+</div>

@@ -1,0 +1,68 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import ThinHeader from '../components/ThinHeader.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_META_TITLE, SITE_DESCRIPTION } from '../consts';
+import '../styles/main.css';
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_META_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.title {
+				font-size: 2em;
+				margin: 0.25em 0 0;
+			}
+
+			.last-updated-on {
+				font-style: italic;
+			}
+		</style>
+	</head>
+
+	<body class="flex flex-col content-center flex-wrap max-w-3xl m-auto dark:bg-slate-800">
+		<main class="w-full max-w-3xl flex-grow dark:text-slate-300">
+			<ThinHeader />
+			<h1 class="text-6xl text-center my-10">Work</h1>
+			<p class="italic text-center mb-5">this page is in progress. please check back later.</p>	
+			<p>
+				<span class="text-gray-400 uppercase">TECHNOLOGIES:</span>
+				<ul class="p-5">
+					<li class="list-disc">Expert in SAAS web technologies, including JavaScript, CSS, HTML5, Sass, node.js.</li>
+					<li class="list-disc">Extensive experience with various frameworks such as Angular, YUI, Ember.js, Backbone, React, and Next.js.</li>
+					<li class="list-disc">Expertise in HTTP, APIs, JSON, JSONP, PHP, Python, Apache, nginx, CSRF, and CSP.</li>
+					<li class="list-disc">Expertise in content security policies for large-scale products with user-generated content.</li>
+					<li class="list-disc">Proficient in managing app security measures such as CSRF protection, cookies, authentication, and participation in HackerOne programs.</li>
+					<li class="list-disc">Knowledgeable in data engineering, including behavioral data instrumentation with tools like Snowplow, data pipelines with AWS S3/Glue, and data processing using MySQL, Aurora, Postgres on Redshift.</li>
+					<li class="list-disc">Experience with user segmentation and recommendation systems using ranking and scoring, and supporting Business Intelligence projects at mega scale (billions of events)</li>
+				</ul>
+			</p>
+			<p class="mt-5"><span class="text-gray-400 uppercase">TECH LEAD:</span>
+				<ul class="p-5">
+					<li class="list-disc">Extensive background leading projects for small teams, overseeing hiring, mentoring, and managing work for engineers of all levels and skillsets.</li>
+					<li class="list-disc">Collaborative approach working closely with C-level executives and key stakeholders to develop roadmaps and project timelines.</li>
+					<li class="list-disc">Strategic project planning, designing and executing phased releases for user testing and performance evaluation.</li>
+					<li class="list-disc">Strong collaboration with cross-functional teams including designers, marketing, support, finance, and product teams.</li>
+				</ul>
+			</p>
+			<p class="mt-5"><span class="text-gray-400 uppercase">DOMAINS EXPERTISE:</span>
+				<ul class="p-5">
+					<li class="list-disc">Expertise in building scalable social products, encompassing features, user network actions, home feed, profile pages, SEO, and trust & safety measures.</li>
+					<li class="list-disc">Expertise in developing subscription technologies, including pricing strategies, worldwide tax policy implementation, VAT compliance, financial regulations, and payment lifecycle management; and training customer support teams.</li>
+					<li class="list-disc">Experience with diverse payment methods such as PayPal, credit cards, and digital wallets like Apple Pay and Google Pay; and SDKs such as including Stripe, Braintree, Digital River, and PayPal.</li>
+					<li class="list-disc" class="list-disc">Expertise in advertising as a publisher and ad tech, working with SSPs, DSPs, Prebid, and Google Ad Manager.</li>
+					<li class="list-disc">Proficient in consent management frameworks such as TCF 2.0 and IAB 3.0.</li>
+
+				</ul>
+			</p>
+			<p class="my-10">I was born and raised in Bordeaux, France, and have had the opportunity to work for startups in Montreal, QC, Vancouver, BC, and Lausanne, Switzerland before joining Yahoo and finally settling in the United States in 2014.</p>
+		</main>
+		<Footer />
+	</body>
+</html>
+<style>
+	h1 {
+		animation: fadeIn .3s ease-in both;
+	}
+</style>

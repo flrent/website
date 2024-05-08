@@ -1,0 +1,23 @@
+---
+
+---
+<script>
+	const handleClick = () => {
+		const theme = localStorage.getItem("theme") || "light";
+		const newTheme = theme === "light" ? "dark" : "light";
+		const button = document.querySelector('button');
+
+		localStorage.setItem("theme", newTheme);
+		document.documentElement.classList.toggle("dark");
+
+		if (button) {
+			button.innerText = (theme === "light" ? "🌙" : "🌞");
+		}
+	};
+
+	let theme = localStorage ? localStorage.getItem("theme") : "light";
+	document.querySelector('button')!.innerText = (theme === "light" ? "🌞" : "🌙");
+	document.querySelector('button')?.addEventListener('click', handleClick)
+</script>
+<button>
+</button>

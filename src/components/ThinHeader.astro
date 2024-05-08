@@ -1,0 +1,25 @@
+---
+import { SITE_TITLE } from '../consts';
+import HeaderNav from './HeaderNav.astro';
+---
+
+<header>
+	<HeaderNav />
+	<h1 class="text-xl text-left font-bold">
+		<a href="/">&#8592; {SITE_TITLE}</a>
+	</h1>
+	<p class="dark:text-slate-200">Software Engineer <span class="dark:text-slate-400"> in San Francisco, California</span></p>
+</header>
+<style>
+	header {
+		margin: 0em 0 2em;
+		animation: slideFadeIn .3s ease-out both;
+	}
+	h1 {
+		margin: 0.5em 0;
+		color: #e45b00;
+	}
+	.flickr-link {
+		color: #0063dc;
+	}
+</style>
