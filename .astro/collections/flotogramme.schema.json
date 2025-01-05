@@ -1,7 +1,7 @@
 {
-  "$ref": "#/definitions/blog",
+  "$ref": "#/definitions/flotogramme",
   "definitions": {
-    "blog": {
+    "flotogramme": {
       "type": "object",
       "properties": {
         "title": {
@@ -35,6 +35,9 @@
         },
         "updatedDate": {
           "type": "string"
+        },
+        "photoBlog": {
+          "type": "boolean"
         },
         "$schema": {
           "type": "string"

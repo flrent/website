@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection, render } from 'astro:content';
+import PhotoBlogPost from '../../layouts/PhotoBlogPost.astro';
+import '../../styles/main.css';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('flotogramme');
+
+	return posts.map((post) => ({
+		params: { id: post.id },
+		props: { post },
+	}));
+}
+const { post } = Astro.props;
+console.log(post);
+const { Content } = await render(post);
+---
+
+<PhotoBlogPost {...post.data}>
+	<Content />
+</PhotoBlogPost>
+
+<style>
+	h1 {
+		animation: fadeIn .3s ease-in both;
+	}
+</style>
